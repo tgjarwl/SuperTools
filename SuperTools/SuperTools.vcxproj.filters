@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{06707159-051e-4c35-a616-549657b88e34}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{a4425a3b-0a2d-4d2d-ab1a-ac5c9c6d862b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8b932c4b-282d-4d2d-b508-6e922afcf06b}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{1c6d64d2-0524-41c5-a4dc-6282bf1e42d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ToolDlgs">
+      <UniqueIdentifier>{959cc105-d356-4182-b003-0b7934b7d795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\wow64ext">
+      <UniqueIdentifier>{63236568-1288-46dc-a908-290cd40559f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils\security">
+      <UniqueIdentifier>{37904246-99e0-4bcd-ae60-99c27b0cb532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpecialEffects">
+      <UniqueIdentifier>{06b79461-c444-493e-91f4-642f5502e5b0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SuperTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>ToolDlgs</Filter>
+    </ClCompile>
+    <ClCompile Include="PeOperation.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgInject.cpp">
+      <Filter>ToolDlgs</Filter>
+    </ClCompile>
+    <ClCompile Include="st_convert.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="psi_s.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="wow64ext\wow64ext.cpp">
+      <Filter>Utils\wow64ext</Filter>
+    </ClCompile>
+    <ClCompile Include="FsDisable.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="secret.cpp">
+      <Filter>Utils\security</Filter>
+    </ClCompile>
+    <ClCompile Include="WmiHelper.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Base64.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="st_inject.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MsgCenter.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEncodingConv.cpp">
+      <Filter>ToolDlgs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgEncodingDigital.cpp">
+      <Filter>ToolDlgs</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgHash.cpp">
+      <Filter>ToolDlgs</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>ToolDlgs</Filter>
+    </ClInclude>
+    <ClInclude Include="PeOperation.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="st_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgInject.h">
+      <Filter>ToolDlgs</Filter>
+    </ClInclude>
+    <ClInclude Include="st_convert.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\CMemPtr.h">
+      <Filter>Utils\wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\internal.h">
+      <Filter>Utils\wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="wow64ext\wow64ext.h">
+      <Filter>Utils\wow64ext</Filter>
+    </ClInclude>
+    <ClInclude Include="FsDisable.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="secret.h">
+      <Filter>Utils\security</Filter>
+    </ClInclude>
+    <ClInclude Include="WmiHelper.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="st_inject.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MsgCenter.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEncodingConv.h">
+      <Filter>ToolDlgs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgEncodingDigital.h">
+      <Filter>ToolDlgs</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgHash.h">
+      <Filter>ToolDlgs</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SuperTools.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\SuperTools.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="SpecialEffects\CodeProject.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

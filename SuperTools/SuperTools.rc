@@ -1,0 +1,442 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_ENCODING_CONV DIALOGEX 0, 0, 385, 453
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "字符串编码转换"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "OUTPUT:",IDC_STATIC,14,158,33,8,0,WS_EX_RIGHT
+    LTEXT           "ASCII:",IDC_STATIC,14,227,33,8,0,WS_EX_RIGHT
+    LTEXT           "UNICODE:",IDC_STATIC,14,299,33,8,0,WS_EX_RIGHT
+    LTEXT           "UTF8:",IDC_STATIC,14,379,33,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_STR,53,155,305,65,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_ASCII,53,225,305,65,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_UNICODE,53,300,305,65,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_EDIT_UTF8,51,378,305,65,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    GROUPBOX        "编码",IDC_STATIC,13,88,360,52
+    PUSHBUTTON      "16进制转文本",IDC_BTN_HEX_2_TEXT,19,122,61,14
+    PUSHBUTTON      "10进制转文本",IDC_BTN_DEC_2_TEXT,89,122,61,14
+    PUSHBUTTON      "文本转16进制",IDC_BTN_TEXT_2_HEX,161,122,61,14
+    GROUPBOX        "输入",IDC_STATIC_INPUT,12,4,350,82
+    EDITTEXT        IDC_EDIT_INPUT,19,17,335,65,ES_MULTILINE | WS_VSCROLL
+    GROUPBOX        "输出",IDC_STATIC,10,143,354,306
+    PUSHBUTTON      "base64解码",IDC_BTN_BASE64_DECODE,306,122,61,14
+    CONTROL         "自动更新结果",IDC_CHECK_AUTO_CONV,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,19,105,64,10
+    PUSHBUTTON      "base64编码",IDC_BTN_BASE64_ENCODE,235,122,61,14
+END
+
+IDD_DLG_INJECT DIALOGEX 0, 0, 440, 116
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "32&64注入工具"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "注入",IDC_BTN_INJECT,380,8,56,104
+    EDITTEXT        IDC_EDIT_PID,67,16,293,14,ES_AUTOHSCROLL
+    LTEXT           "PID or Path:",IDC_STATIC,17,19,48,8
+    LTEXT           "Dll Path：",IDC_STATIC,17,72,31,8
+    EDITTEXT        IDC_EDIT_Dll_PATH,67,70,293,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_FUNC_NAME,67,92,151,14,ES_AUTOHSCROLL
+    LTEXT           "Func Name：",IDC_STATIC,17,93,43,8
+    EDITTEXT        IDC_EDIT_PARAM,67,38,293,27,ES_MULTILINE | WS_VSCROLL
+    LTEXT           "Param：",IDC_STATIC,17,45,27,8
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 187, 102
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 SuperTools"
+FONT 9, "Segoe UI", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,81,50,14
+    CTEXT           "SuperTools Application v1.0\nby tgjarwl\n(c) Copyright 2020",IDC_STATIC,25,57,78,32
+    ICON            IDR_MAINFRAME,IDC_STATIC,55,26,20,20
+    GROUPBOX        "",IDC_STATIC,7,7,115,88
+END
+
+IDD_MAINDLG DIALOGEX 0, 0, 337, 252
+STYLE DS_SETFONT | WS_MINIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "SuperTools"
+FONT 9, "Segoe UI", 0, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_COMBO_CMD_TYPE,4,6,53,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CMD_BAR,60,6,238,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_OUTPUT,4,26,329,213,ES_MULTILINE | WS_VSCROLL
+    DEFPUSHBUTTON   "DO",IDC_BUTTON_DO,302,7,32,13
+END
+
+IDD_DLG_ENCODING_DIGITAL DIALOGEX 0, 0, 255, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "数字编码转换"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_CODE_DIGITAL,22,23,207,14,ES_AUTOHSCROLL
+    GROUPBOX        "输入-整数",IDC_STATIC_ENCODING_DGT_TYPE,12,6,230,62
+    GROUPBOX        "输出-Hex",IDC_STATIC,12,76,230,95
+    LTEXT           "整数：",IDC_STATIC,22,98,25,8
+    EDITTEXT        IDC_EDIT_CODE_DGT_INT,56,96,173,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "float：",IDC_STATIC,22,124,24,8
+    EDITTEXT        IDC_EDIT_CODE_DGT_FLOAT,56,122,173,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "double：",IDC_STATIC,22,150,30,8
+    EDITTEXT        IDC_EDIT_CODE_DGT_DOUBLE,56,148,173,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "整数",IDC_RADIO_INT,"Button",BS_AUTORADIOBUTTON | WS_GROUP,22,48,32,10
+    CONTROL         "浮点数",IDC_RADIO_FLOAT,"Button",BS_AUTORADIOBUTTON,72,48,40,10
+    CONTROL         "16进制字符串",IDC_RADIO_HEX,"Button",BS_AUTORADIOBUTTON,130,48,64,10
+END
+
+IDD_DLG_HASH DIALOGEX 0, 0, 283, 274
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "哈希/散列"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "输入",IDC_STATIC,9,9,260,71
+    EDITTEXT        IDC_EDIT_DLG_HASH_INPUT,24,21,235,36,ES_MULTILINE | WS_VSCROLL
+    GROUPBOX        "Key",IDC_STATIC,9,88,260,46
+    EDITTEXT        IDC_EDIT_DLG_HASH_EXTRA,23,102,235,24,ES_MULTILINE | WS_VSCROLL
+    GROUPBOX        "算法",IDC_STATIC,9,139,260,40
+    PUSHBUTTON      "BKDRHash",IDC_BTN_DLG_HASH_BKDR,22,154,50,14
+    GROUPBOX        "输出",IDC_STATIC,7,188,260,76
+    EDITTEXT        IDC_EDIT_DLG_HASH_OUTPUT,22,200,235,57,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Normal",IDC_RADIO_HASH_NORMAL,"Button",BS_AUTORADIOBUTTON,23,63,38,10
+    CONTROL         "Lowwer",IDC_RADIO_HASH_LOW,"Button",BS_AUTORADIOBUTTON,87,63,41,10
+    CONTROL         "Upper",IDC_RADIO_HASH_UPPER,"Button",BS_AUTORADIOBUTTON,155,63,35,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_DLG_ENCODING_CONV, DIALOG
+    BEGIN
+        RIGHTMARGIN, 380
+        BOTTOMMARGIN, 449
+    END
+
+    IDD_DLG_INJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 436
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_MAINDLG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 336
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_DLG_ENCODING_DIGITAL, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 180
+    END
+
+    IDD_DLG_HASH, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 253
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    MENUITEM "文件",                          ID_32777
+    POPUP "工具"
+    BEGIN
+        MENUITEM "字符串编码转换",                     ID_TOOL_ENCODING_CONV
+        MENUITEM "数字编码转换",                      ID_TOOL_ENCODING_DIGITAL
+        MENUITEM "Hash算法",                      ID_TOOL_HASH
+        MENUITEM "注入工具",                        ID_TOOL_INJECT
+    END
+    POPUP "帮助"
+    BEGIN
+        MENUITEM "关于SuperTools",                ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DLG_ENCODING_CONV AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLG_INJECT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_MAINDLG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLG_ENCODING_DIGITAL AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_DLG_HASH AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "SpecialEffects\\CodeProject.bmp"
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\SuperTools.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "SuperTools Module"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "SuperTools"
+            VALUE "LegalCopyright", "Copyright 2020"
+            VALUE "OriginalFilename", "SuperTools.exe"
+            VALUE "ProductName", "SuperTools Module"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "SuperTools"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    ATL_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    ATL_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+    ATL_IDS_SCTASKLIST      "Activate Task List"
+    ATL_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

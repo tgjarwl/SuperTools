@@ -1,4 +1,5 @@
 #pragma once
+#include "MyEdit.h"
 
 class CDlgInject : public CDialogImpl<CDlgInject>
 {
@@ -11,6 +12,10 @@ public:
         COMMAND_ID_HANDLER(IDCANCEL, OnCloseCmd)
         COMMAND_HANDLER(IDC_BTN_INJECT, BN_CLICKED, OnBnClickedBtnInject)
     END_MSG_MAP()
+
+public:
+    CMyEdit m_dropEditPID;
+    CMyEdit m_dropEditDll;
 
     // Handler prototypes (uncomment arguments if needed):
     //	LRESULT MessageHandler(UINT /*uMsg*/, WPARAM /*wParam*/, LPARAM /*lParam*/, BOOL& /*bHandled*/)

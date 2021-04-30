@@ -14,17 +14,20 @@
 #define IDD_DLG_ENCODING_DIGITAL        209
 #define IDD_DLG_HASH                    211
 #define IDB_BITMAP1                     214
-#define IDC_BTN_INJECT                  1000
-#define IDC_EDIT_PID                    1001
+
+#define IDC_BTN_INJECT                  5000
+#define IDC_EDIT_PID                    5001
+#define IDC_EDIT_Dll_PATH               5002
+#define IDC_EDIT_FUNC_NAME              5003
+#define IDC_EDIT_PARAM                  5004
+
+
 #define IDC_EDIT_STR                    1001
-#define IDC_EDIT_Dll_PATH               1002
 #define IDC_EDIT_ASCII                  1002
 #define IDC_COMBO_CMD_TYPE              1002
-#define IDC_EDIT_FUNC_NAME              1003
 #define IDC_EDIT_UNICODE                1003
 #define IDC_EDIT_CMD_BAR                1003
 #define IDC_EDIT_FUNC_NAME2             1004
-#define IDC_EDIT_PARAM                  1004
 #define IDC_EDIT_UTF8                   1004
 #define IDC_EDIT_INPUT                  1005
 #define IDC_EDIT_OUTPUT                 1006

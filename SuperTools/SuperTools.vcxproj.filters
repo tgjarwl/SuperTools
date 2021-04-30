@@ -28,6 +28,9 @@
     <Filter Include="SpecialEffects">
       <UniqueIdentifier>{06b79461-c444-493e-91f4-642f5502e5b0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="UserCtrls">
+      <UniqueIdentifier>{a676ec2d-239b-4ba6-9efe-43aaded67336}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -86,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="DlgHash.cpp">
       <Filter>ToolDlgs</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEdit.cpp">
+      <Filter>UserCtrls</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +157,9 @@
     </ClInclude>
     <ClInclude Include="DlgHash.h">
       <Filter>ToolDlgs</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEdit.h">
+      <Filter>UserCtrls</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

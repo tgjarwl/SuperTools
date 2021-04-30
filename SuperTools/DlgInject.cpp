@@ -3,9 +3,19 @@
 #include "PeOperation.h"
 #include "st_inject.h"
 
+
 LRESULT CDlgInject::OnInitDialog(UINT, WPARAM, LPARAM, BOOL &)
 {
     CenterWindow(GetParent());
+
+    // pid控件支持 文件拖拽
+    m_dropEditPID.InitCtrl(this->m_hWnd, IDC_EDIT_PID);
+    m_dropEditPID.SubclassWindow(GetDlgItem(IDC_EDIT_PID).m_hWnd);
+
+    // dll控件支持 文件拖拽
+    m_dropEditDll.InitCtrl(this->m_hWnd, IDC_EDIT_Dll_PATH);
+    m_dropEditDll.SubclassWindow(GetDlgItem(IDC_EDIT_Dll_PATH).m_hWnd);
+
     return TRUE;
 }
 

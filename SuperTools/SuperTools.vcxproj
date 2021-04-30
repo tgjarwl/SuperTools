@@ -204,6 +204,7 @@
     <ClCompile Include="DlgInject.cpp" />
     <ClCompile Include="FsDisable.cpp" />
     <ClCompile Include="MsgCenter.cpp" />
+    <ClCompile Include="MyEdit.cpp" />
     <ClCompile Include="PeOperation.cpp" />
     <ClCompile Include="DlgEncodingConv.cpp" />
     <ClCompile Include="MainDlg.cpp" />
@@ -237,6 +238,7 @@
     <ClInclude Include="DlgInject.h" />
     <ClInclude Include="FsDisable.h" />
     <ClInclude Include="MsgCenter.h" />
+    <ClInclude Include="MyEdit.h" />
     <ClInclude Include="PeOperation.h" />
     <ClInclude Include="DlgEncodingConv.h" />
     <ClInclude Include="MainDlg.h" />

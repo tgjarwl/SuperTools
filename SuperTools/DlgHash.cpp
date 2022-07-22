@@ -13,6 +13,8 @@ LRESULT CDlgHash::OnInitDialog(UINT, WPARAM, LPARAM, BOOL &)
     m_defaultCheck = HASH_INOUT_NORMAL;
     Button_SetCheck(GetDlgItem(IDC_RADIO_HASH_NORMAL).m_hWnd, 1);
 
+    SetDlgItemInt(IDC_EDIT_DLG_HASH_EXTRA, 131);
+
     return TRUE;
 }
 

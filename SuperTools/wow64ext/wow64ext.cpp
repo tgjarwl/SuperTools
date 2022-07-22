@@ -387,7 +387,7 @@ extern "C" __declspec(dllexport) VOID __cdecl SetLastErrorFromX64Call(DWORD64 st
 	}
 }
 
-DWORD64 ZwCreateThreadEx64(HANDLE hProcess, DWORD DesiredAccess, DWORD64 ObjectAttributes, HANDLE ProcessHandle, DWORD64 lpStartAddress, DWORD64 lpParameter, ULONG CreateThreadFlags, SIZE_T ZeroBits, SIZE_T StackSize, SIZE_T MaximumStackSize, DWORD64 pUnkown)
+extern "C" __declspec(dllexport) DWORD64 __cdecl ZwCreateThreadEx64(PHANDLE ThreadHandle, DWORD DesiredAccess, DWORD64 ObjectAttributes, HANDLE ProcessHandle, DWORD64 lpStartAddress, DWORD64 lpParameter, ULONG CreateThreadFlags, SIZE_T ZeroBits, SIZE_T StackSize, SIZE_T MaximumStackSize, DWORD64 pUnkown)
 {
     static DWORD64 ntzctex = 0;
     if (0 == ntzctex)
@@ -397,7 +397,7 @@ DWORD64 ZwCreateThreadEx64(HANDLE hProcess, DWORD DesiredAccess, DWORD64 ObjectA
             return 0;
     }
 
-    DWORD64 ret = X64Call(ntzctex, 11, (DWORD64)hProcess, (DWORD64)DesiredAccess, (DWORD64)ObjectAttributes, (DWORD64)ProcessHandle,
+    DWORD64 ret = X64Call(ntzctex, 11, (DWORD64)ThreadHandle, (DWORD64)DesiredAccess, (DWORD64)ObjectAttributes, (DWORD64)ProcessHandle,
         (DWORD64)lpStartAddress, (DWORD64)lpParameter, (DWORD64)CreateThreadFlags, (DWORD64)ZeroBits, (DWORD64)StackSize, (DWORD64)MaximumStackSize, (DWORD64)pUnkown);
 
     return ret;

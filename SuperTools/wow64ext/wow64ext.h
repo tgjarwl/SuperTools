@@ -371,7 +371,7 @@ extern "C"
 	__declspec(SPEC)BOOL __cdecl GetThreadContext64(HANDLE hThread, _CONTEXT64* lpContext);
 	__declspec(SPEC)BOOL __cdecl SetThreadContext64(HANDLE hThread, _CONTEXT64* lpContext);
 	__declspec(SPEC)VOID __cdecl SetLastErrorFromX64Call(DWORD64 status);
-    __declspec(SPEC)DWORD64 __cdecl ZwCreateThreadEx64(HANDLE hProcess, 
+    __declspec(SPEC)DWORD64 __cdecl ZwCreateThreadEx64(PHANDLE ThreadHandle,
                                                        DWORD DesiredAccess,
                                                        DWORD64 ObjectAttributes,
                                                        HANDLE ProcessHandle, 

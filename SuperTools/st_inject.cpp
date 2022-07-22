@@ -251,7 +251,7 @@ BOOL PSI::StartX64Exe(CString szExePath, CString szParam, CString szDllPath, CSt
         }
 
         CString szParam;
-        szParam.Format(L"pRemoteAddr : 0x%08x%08x", ctx.Rcx >>32, ctx.Rcx & 0x0ffffffff);
+        szParam.Format(L"pRemoteAddr : 0x%08x%08x", (DWORD)(ctx.Rcx >>32), (DWORD)(ctx.Rcx & 0x0ffffffff));
         MessageBox(NULL, szParam, L"click to continue run ", MB_OK);
 
         if (!SetThreadContext64(pi.hThread, &ctx))
@@ -456,15 +456,16 @@ BOOL PSI::RemoteInjectX64Exe(HANDLE hProcess, CString szParam, CString szDllPath
 
         DWORD64 pStartAddr = LpAddr + MAX_PATH * sizeof(TCHAR) + sizeof(inBuf.szFuncName) + sizeof(STRING) + sizeof(STRING);
 
+
         CString szParam;
-        szParam.Format(L"pRemoteAddr : 0x%08x%08x", pStartAddr >> 32, pStartAddr & 0x0ffffffff);
+        szParam.Format(L"pRemoteAddr : 0x%08x ~ %08x", (DWORD)(pStartAddr >> 32), (DWORD)pStartAddr & 0x0ffffffff);
         MessageBox(NULL, szParam, L"click to continue run ", MB_OK);
 
         DWORD64 dwStatus = ZwCreateThreadEx64(&hRemoteThread, STANDARD_RIGHTS_ALL, NULL, hProcess, (DWORD64)pStartAddr, NULL, 0, 0, 0, 0, NULL);
         if (NULL == hRemoteThread)
         {
             CString szError;
-            szError.Format(L"pRemoteAddr : 0x%08x%08x", dwStatus >> 32, dwStatus & 0x0ffffffff);
+            szError.Format(L"pRemoteAddr : 0x%08x~%08x", (DWORD)(dwStatus >> 32), (DWORD)dwStatus & 0x0ffffffff);
             MessageBox(NULL, L"ZwCreateThreadEx64  failed", szError, MB_OK);
             break;
         }

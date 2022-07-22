@@ -20,7 +20,8 @@ BOOL base64::Base64Encrypt(BYTE* lpIn, DWORD pInLen, CStringA &szOut)
     }
 
     BOOL bSuccess = FALSE;
-    DWORD nLenOut = pInLen * 5;
+
+    DWORD nLenOut = pInLen * 4 / 3 + 4;
     CHAR *pDst = new CHAR[nLenOut];
     if (pDst)
     {

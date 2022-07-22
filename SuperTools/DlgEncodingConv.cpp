@@ -303,7 +303,22 @@ LRESULT CDlgEncodingConv::OnBnClickedBtnBase64Encode(WORD /*wNotifyCode*/, WORD 
         if (base64::Base64Encrypt((BYTE*)szAData.GetString(), szAData.GetLength(), szOut))
         {
             CString szOutData = CA2W(szOut);
-            MsgCtl::PresentMsg(m_hWnd, IDC_EDIT_STR, szOutData);
+            MsgCtl::PresentMsg(m_hWnd, IDC_EDIT_ASCII, szOutData);
+
+        }
+
+        if (base64::Base64Encrypt((BYTE*)szData.GetString(), szData.GetLength()*2, szOut))
+        {
+            CString szOutData = CA2W(szOut);
+            MsgCtl::PresentMsg(m_hWnd, IDC_EDIT_UNICODE, szOutData);
+
+        }
+
+        CStringA szAUtf8Data = CW2A(szData, CP_UTF8);
+        if (base64::Base64Encrypt((BYTE*)szAUtf8Data.GetString(), szAUtf8Data.GetLength(), szOut))
+        {
+            CString szOutData = CA2W(szOut);
+            MsgCtl::PresentMsg(m_hWnd, IDC_EDIT_UTF8, szOutData);
 
         }
     }
